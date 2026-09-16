@@ -1922,3 +1922,16 @@ form.sim input:focus, form.sim select:focus { outline: 2px solid var(--accent); 
     margin-top: 0;
     background-color: var(--background-alt);
 }
+
+/* ---- Bande de chiffres : olive profond au lieu du gris ---- */
+.stats-band {
+    background: linear-gradient(160deg, #4A4A1D 0%, #34340F 55%, #24240A 100%);
+    color: #F5F1E6;
+}
+.stats-lead-value { color: #F5F1E6; }
+.stats-lead-label { color: rgba(245, 241, 230, 0.86); }
+.stats-source { color: rgba(245, 241, 230, 0.58); }
+.stats-row { border-top-color: rgba(245, 241, 230, 0.26); }
+.stat strong { color: #E9E8C2; }
+.stat span { color: rgba(245, 241, 230, 0.72); }
+.stat em { color: rgba(245, 241, 230, 0.5); }
