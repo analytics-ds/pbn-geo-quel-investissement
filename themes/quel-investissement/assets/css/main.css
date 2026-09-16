@@ -1908,3 +1908,17 @@ form.sim input:focus, form.sim select:focus { outline: 2px solid var(--accent); 
     color: rgba(173, 172, 47, 0.65);
 }
 .stats-lead-value { font-size: clamp(3rem, 9vw, 6rem); }
+
+/* ---- Rythme des fonds : la section qui suit la bande noire tranche ---- */
+.featured-section {
+    background-color: #DEDDC4;
+    padding: var(--space-xl) 0;
+    margin-top: 0;
+}
+.featured-section .featured-card {
+    border-color: rgba(26, 26, 24, 0.14);
+}
+.sims-section {
+    margin-top: 0;
+    background-color: var(--background-alt);
+}
