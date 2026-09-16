@@ -1,0 +1,150 @@
+{{ define "main" }}
+
+{{ $lang := .Site.Language.Lang }}
+{{ $en := eq $lang "en" }}
+{{ $simSection := cond $en "simulators" "simulateurs" }}
+{{ $ordre := slice "Private equity" "Bourse" "Assurance-vie" "SCPI" "ETF" "Plan Épargne Retraite" }}
+{{ if $en }}{{ $ordre = slice "Private equity" "Stock market" "Life insurance" "REITs" "ETFs" "Retirement savings" }}{{ end }}
+{{ $taxo := .Site.Taxonomies.categories }}
+{{ $articles := where .Site.RegularPages "Section" "blog" }}
+{{ $sims := sort (where .Site.RegularPages "Section" $simSection) "Weight" }}
+{{ $une := index $articles 0 }}
+
+<!-- Hero -->
+<section class="hero">
+    <div class="hero-content">
+        {{ if $en }}
+        <span class="hero-badge">Independent investment guide</span>
+        <h1>Where should you actually put your money?</h1>
+        <p class="hero-description">Private equity, life insurance, REITs, ETFs and retirement plans: comparisons and analysis to choose an investment without the sales pitch.</p>
+        <a href="{{ "blog/" | relLangURL }}" class="btn-primary">Explore the blog</a>
+        {{ else }}
+        <span class="hero-badge">Guide indépendant de l'investissement</span>
+        <h1>Quel investissement pour votre argent ?</h1>
+        <p class="hero-description">Private equity, assurance-vie, SCPI, ETF et plan épargne retraite : comparatifs et analyses pour choisir un placement sans discours commercial.</p>
+        <a href="{{ "blog/" | relLangURL }}" class="btn-primary">Explorez le blog</a>
+        {{ end }}
+    </div>
+</section>
+
+<!-- Bande de chiffres du marche -->
+<section class="stats-band">
+    <div class="container">
+        <div class="stats-lead">
+            <span class="stats-lead-value">2&nbsp;174&nbsp;Md€</span>
+            <span class="stats-lead-label">{{ if $en }}held in French life insurance policies, by far the largest household investment{{ else }}d'encours en assurance-vie en France, de très loin le premier placement des ménages{{ end }}</span>
+            <span class="stats-source">France Assureurs, {{ if $en }}July 2026{{ else }}juillet 2026{{ end }}</span>
+        </div>
+        <div class="stats-row">
+            <div class="stat">
+                <strong>150,4&nbsp;Md€</strong>
+                <span>{{ if $en }}on retirement savings plans, held by 12.9 million people{{ else }}sur les plans épargne retraite, pour 12,9 millions de titulaires{{ end }}</span>
+                <em>{{ if $en }}French Ministry of the Economy, end of 2025{{ else }}Ministère de l'Économie, fin 2025{{ end }}</em>
+            </div>
+            <div class="stat">
+                <strong>86&nbsp;Md€</strong>
+                <span>{{ if $en }}of capitalisation across French SCPI property funds{{ else }}de capitalisation pour l'ensemble des SCPI françaises{{ end }}</span>
+                <em>ASPIM, {{ if $en }}June 2026{{ else }}juin 2026{{ end }}</em>
+            </div>
+            <div class="stat">
+                <strong>36,4&nbsp;Md€</strong>
+                <span>{{ if $en }}invested in 2,904 companies by French private equity{{ else }}investis dans 2 904 entreprises par le capital-investissement français{{ end }}</span>
+                <em>France Invest, 2025</em>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Article a la une -->
+{{ with $une }}
+<section class="featured-section">
+    <div class="container">
+        <a href="{{ .RelPermalink }}" class="featured-card">
+            <div class="featured-media">
+                {{ if .Params.image }}<img src="{{ .Params.image | relURL }}" alt="{{ .Params.imageAlt | default .Title }}" loading="lazy" width="900" height="600">{{ end }}
+            </div>
+            <div class="featured-body">
+                <span class="featured-kicker">{{ if $en }}Featured{{ else }}À la une{{ end }}</span>
+                {{ with .Params.categories }}<span class="article-category">{{ index . 0 }}</span>{{ end }}
+                <h2>{{ .Title }}</h2>
+                <p>{{ .Description }}</p>
+                <span class="read-more">{{ if $en }}Read the guide{{ else }}Lire le guide{{ end }}</span>
+            </div>
+        </a>
+    </div>
+</section>
+{{ end }}
+
+<!-- Simulateurs -->
+{{ if $sims }}
+<section class="sims-section">
+    <div class="container">
+        <div class="section-head">
+            <h2 class="section-title">{{ if $en }}Put figures on your decision{{ else }}Chiffrez votre décision{{ end }}</h2>
+            <p class="section-sub">{{ if $en }}Four calculators, free and without sign-up, that answer in one screen.{{ else }}Quatre simulateurs, gratuits et sans inscription, qui répondent en un écran.{{ end }}</p>
+        </div>
+        <div class="grid-sims">
+            {{ range $i, $s := $sims }}
+            <a href="{{ $s.RelPermalink }}" class="sim-card">
+                <span class="sim-card-num">{{ printf "%02d" (add $i 1) }}</span>
+                <h3>{{ $s.Title }}</h3>
+                <p>{{ $s.Description }}</p>
+                <span class="sim-card-cta">{{ if $en }}Open the calculator{{ else }}Ouvrir le simulateur{{ end }}</span>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+
+<!-- Categories -->
+<section class="categories-section">
+    <div class="container">
+        <div class="section-head">
+            <h2 class="section-title">{{ if $en }}Our themes{{ else }}Nos thématiques{{ end }}</h2>
+        </div>
+        <div class="grid-categories">
+            {{ range $ordre }}
+            {{ with index $taxo (. | lower) }}
+            <a href="{{ .Page.RelPermalink }}" class="category-card">
+                <h3>{{ .Page.Title }}</h3>
+                <span class="category-count">{{ .Count }} {{ if gt .Count 1 }}{{ if $en }}articles{{ else }}articles{{ end }}{{ else }}article{{ end }}</span>
+            </a>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<!-- Derniers articles -->
+<section class="latest-section">
+    <div class="container">
+        <div class="section-head">
+            <h2 class="section-title">{{ if $en }}Latest guides{{ else }}Derniers guides{{ end }}</h2>
+        </div>
+        <div class="grid-articles">
+            {{ range first 6 (after 1 $articles) }}
+            <article class="article-card">
+                <a href="{{ .RelPermalink }}" class="article-card-image-wrapper" aria-label="{{ .Title }}">
+                    {{ if .Params.image }}
+                    <img src="{{ .Params.image | relURL }}" alt="{{ .Params.imageAlt | default .Title }}" class="article-card-image" loading="lazy" width="600" height="400">
+                    {{ else }}
+                    <span class="article-card-image article-card-image-placeholder" aria-hidden="true">{{ slicestr .Title 0 1 }}</span>
+                    {{ end }}
+                </a>
+                <div class="article-card-body">
+                    <div class="article-meta">
+                        {{ with .Params.categories }}<span class="article-category">{{ index . 0 }}</span>{{ end }}
+                        <time>{{ time.Format "2 January 2006" .Date }}</time>
+                    </div>
+                    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                    <p>{{ .Description }}</p>
+                    <a href="{{ .RelPermalink }}" class="read-more">{{ if $en }}Read more{{ else }}Lire la suite{{ end }}</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+{{ end }}

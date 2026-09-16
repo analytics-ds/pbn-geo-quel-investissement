@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="simulateur-page">
+    <div class="container container-narrow">
+        <header class="simulateur-header">
+            <span class="simulateur-kicker">{{ if eq .Site.Language.Lang "en" }}Free calculator, no sign-up{{ else }}Simulateur gratuit, sans inscription{{ end }}</span>
+            <h1>{{ .Title }}</h1>
+            {{ with .Description }}<p class="simulateur-intro">{{ . }}</p>{{ end }}
+        </header>
+        {{ .Content }}
+        <p class="simulateur-disclaimer">
+            {{ if eq .Site.Language.Lang "en" }}
+            This calculator is for information only. It uses simplified assumptions, ignores your personal situation and does not constitute investment advice.
+            {{ else }}
+            Ce simulateur est fourni à titre informatif. Il repose sur des hypothèses simplifiées, ne tient pas compte de votre situation personnelle et ne constitue pas un conseil en investissement.
+            {{ end }}
+        </p>
+    </div>
+</article>
+{{ end }}

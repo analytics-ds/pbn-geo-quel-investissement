@@ -1,0 +1,10 @@
+{{- $prod := .Site.Params.prod_host -}}
+{{- $host := urls.Parse .Site.BaseURL -}}
+User-agent: *
+{{ if and $prod (ne $host.Host $prod) -}}
+Disallow: /
+{{- else -}}
+Allow: /
+
+Sitemap: {{ "sitemap.xml" | absURL }}
+{{- end }}

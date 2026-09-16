@@ -1,0 +1,122 @@
+baseURL = "https://analytics-ds.github.io/pbn-geo-quel-investissement/"
+title = "Quel Investissement"
+theme = "quel-investissement"
+removePathAccents = true
+enableRobotsTXT = true
+
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+
+[languages]
+  [languages.fr]
+    locale = "fr-FR"
+    label = "Français"
+    weight = 1
+    title = "Quel Investissement"
+    contentDir = "content/fr"
+    [languages.fr.params]
+      description = "Le guide indépendant pour comparer les placements, les fonds et les plateformes d'investissement en France."
+
+  [languages.en]
+    locale = "en-US"
+    label = "English"
+    weight = 2
+    title = "Quel Investissement"
+    contentDir = "content/en"
+    [languages.en.params]
+      description = "The independent guide to comparing investments, funds and investment platforms in France."
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[[languages.fr.menus.main]]
+  name = "Private equity"
+  url = "/categories/private-equity/"
+  weight = 2
+[[languages.fr.menus.main]]
+  name = "Bourse"
+  url = "/categories/bourse/"
+  weight = 2.5
+
+[[languages.fr.menus.main]]
+  name = "Assurance-vie"
+  url = "/categories/assurance-vie/"
+  weight = 3
+[[languages.fr.menus.main]]
+  name = "SCPI"
+  url = "/categories/scpi/"
+  weight = 4
+[[languages.fr.menus.main]]
+  name = "ETF"
+  url = "/categories/etf/"
+  weight = 5
+[[languages.fr.menus.main]]
+  name = "PER"
+  url = "/categories/plan-epargne-retraite/"
+  weight = 6
+
+[[languages.en.menus.main]]
+  name = "Private equity"
+  url = "/en/categories/private-equity/"
+  weight = 2
+[[languages.en.menus.main]]
+  name = "Stock market"
+  url = "/en/categories/stock-market/"
+  weight = 2.5
+
+[[languages.en.menus.main]]
+  name = "Life insurance"
+  url = "/en/categories/life-insurance/"
+  weight = 3
+[[languages.en.menus.main]]
+  name = "REITs"
+  url = "/en/categories/reits/"
+  weight = 4
+[[languages.en.menus.main]]
+  name = "ETFs"
+  url = "/en/categories/etfs/"
+  weight = 5
+[[languages.en.menus.main]]
+  name = "Retirement"
+  url = "/en/categories/retirement-savings/"
+  weight = 6
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[outputs]
+  home = ['html', 'rss']
+  section = ['html', 'rss']
+
+[params]
+  # Domaine de production. Tant que le baseURL ne pointe pas dessus, le site
+  # bascule en noindex + robots Disallow. Le garde-fou se leve seul au branchement.
+  prod_host = "quel-investissement.com"
+  author_name = "Sophie Martin"
+  author_url = ""
+  author_job_title = "Journaliste patrimoine et investissement"
+  default_og_image = "/images/og-default.jpg"
+  logo = "/favicon.svg"
+  founding_year = "2026"
+  expertise = ["Private equity", "Assurance-vie", "SCPI", "ETF", "Plan Épargne Retraite", "Stratégie patrimoniale"]
+
+[related]
+  includeNewer = true
+  threshold = 80
+  [[related.indices]]
+    name = "categories"
+    weight = 100
+  [[related.indices]]
+    name = "tags"
+    weight = 80
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 2
+    ordered = true
+  [markup.goldmark.renderer]
+    unsafe = true
