@@ -123,7 +123,7 @@
             <h2 class="section-title">{{ if $en }}Latest guides{{ else }}Derniers guides{{ end }}</h2>
         </div>
         <div class="grid-articles">
-            {{ range first 6 (after 1 $articles) }}
+            {{ range first 6 $articles }}
             <article class="article-card">
                 <a href="{{ .RelPermalink }}" class="article-card-image-wrapper" aria-label="{{ .Title }}">
                     {{ if .Params.image }}
