@@ -1,0 +1,383 @@
+# Roadmap editoriale evergreen — Quel Investissement (pbn-geo-quel-investissement)
+#
+# Blog : https://quel-investissement.com/
+# Langue principale : fr (content/fr) + EN auto (content/en)
+# Cadence : 2 articles par semaine, mardi et vendredi, 1h UTC (routine cloud)
+#
+# Categories disponibles (orthographe exacte, doit matcher le frontmatter du site) :
+#   - Private equity
+#   - Assurance-vie
+#   - SCPI
+#   - ETF
+#   - Plan Épargne Retraite
+#   - Bourse
+#   - Stratégie patrimoniale
+#
+# FONCTIONNEMENT
+# --------------
+# L'agent prend la premiere entree avec status: todo et scheduled_date <= today,
+# triee par scheduled_date croissante. Il genere l'article FR + EN et push sur
+# main. GitHub Actions deploie. En cas d'echec, status passe a failed et error
+# est rempli. Une entree failed n'est jamais retentee automatiquement.
+#
+# AJOUT D'UNE ENTREE
+# ------------------
+# Copier un bloc, remplir kw / category / scheduled_date, laisser les autres
+# champs tels quels. volume et kd sont informatifs, ignores par l'agent.
+#
+# Source des mots-cles : volumes Haloscan (septembre 2026), sujets issus de
+# l'analyse des blogs finance concurrents (avenuedesinvestisseurs.fr,
+# finance-heros.fr, epargnant30.fr, cafedelabourse.com).
+
+articles:
+  - kw: "fcpr"
+    category: "Private equity"
+    volume: 1800
+    kd: null
+    scheduled_date: "2026-09-22"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "fiscalite assurance vie"
+    category: "Assurance-vie"
+    volume: 793
+    kd: null
+    scheduled_date: "2026-09-25"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "comment investir en scpi"
+    category: "SCPI"
+    volume: 600
+    kd: null
+    scheduled_date: "2026-09-29"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "etf msci world"
+    category: "ETF"
+    volume: 10100
+    kd: null
+    scheduled_date: "2026-10-02"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "plafond epargne retraite"
+    category: "Plan Épargne Retraite"
+    volume: 2000
+    kd: null
+    scheduled_date: "2026-10-06"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "pea pme"
+    category: "Bourse"
+    volume: 3700
+    kd: null
+    scheduled_date: "2026-10-09"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "ou placer 100 000 euros"
+    category: "Stratégie patrimoniale"
+    volume: 536
+    kd: null
+    scheduled_date: "2026-10-13"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "fpci"
+    category: "Private equity"
+    volume: 1200
+    kd: null
+    scheduled_date: "2026-10-16"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "assurance vie apres 70 ans"
+    category: "Assurance-vie"
+    volume: 1182
+    kd: null
+    scheduled_date: "2026-10-20"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "scpi a credit"
+    category: "SCPI"
+    volume: 1000
+    kd: null
+    scheduled_date: "2026-10-23"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "etf obligataire"
+    category: "ETF"
+    volume: 236
+    kd: null
+    scheduled_date: "2026-10-27"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "transfert per"
+    category: "Plan Épargne Retraite"
+    volume: 600
+    kd: null
+    scheduled_date: "2026-10-30"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "ordre de bourse"
+    category: "Bourse"
+    volume: 480
+    kd: null
+    scheduled_date: "2026-11-03"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "compte a terme"
+    category: "Stratégie patrimoniale"
+    volume: 11900
+    kd: null
+    scheduled_date: "2026-11-06"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "dette privee"
+    category: "Private equity"
+    volume: 1300
+    kd: null
+    scheduled_date: "2026-11-10"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "succession assurance vie"
+    category: "Assurance-vie"
+    volume: 7400
+    kd: null
+    scheduled_date: "2026-11-13"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "scpi europeenne"
+    category: "SCPI"
+    volume: 700
+    kd: null
+    scheduled_date: "2026-11-17"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "etf synthetique"
+    category: "ETF"
+    volume: 140
+    kd: null
+    scheduled_date: "2026-11-20"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "deblocage anticipe per"
+    category: "Plan Épargne Retraite"
+    volume: 390
+    kd: null
+    scheduled_date: "2026-11-24"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "acheter une action en bourse"
+    category: "Bourse"
+    volume: 491
+    kd: null
+    scheduled_date: "2026-11-27"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "livret a ou assurance vie"
+    category: "Stratégie patrimoniale"
+    volume: 720
+    kd: null
+    scheduled_date: "2026-12-01"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "eltif"
+    category: "Private equity"
+    volume: 320
+    kd: null
+    scheduled_date: "2026-12-04"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "arbitrage assurance vie"
+    category: "Assurance-vie"
+    volume: 800
+    kd: null
+    scheduled_date: "2026-12-08"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "fiscalite des scpi"
+    category: "SCPI"
+    volume: 100
+    kd: null
+    scheduled_date: "2026-12-11"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "frais etf"
+    category: "ETF"
+    volume: 170
+    kd: null
+    scheduled_date: "2026-12-15"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "ouvrir un per"
+    category: "Plan Épargne Retraite"
+    volume: 880
+    kd: null
+    scheduled_date: "2026-12-18"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "pea ou cto"
+    category: "Bourse"
+    volume: 320
+    kd: null
+    scheduled_date: "2026-12-22"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "crowdfunding immobilier"
+    category: "Stratégie patrimoniale"
+    volume: 7364
+    kd: null
+    scheduled_date: "2026-12-25"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "carried interest"
+    category: "Private equity"
+    volume: 700
+    kd: null
+    scheduled_date: "2026-12-29"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "clause beneficiaire assurance vie"
+    category: "Assurance-vie"
+    volume: 100
+    kd: null
+    scheduled_date: "2027-01-01"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "demembrement scpi"
+    category: "SCPI"
+    volume: 155
+    kd: null
+    scheduled_date: "2027-01-05"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
+
+  - kw: "fonds evergreen"
+    category: "Private equity"
+    volume: 210
+    kd: null
+    scheduled_date: "2027-01-08"
+    status: todo
+    published_date: null
+    published_url_fr: null
+    published_url_en: null
+    error: null
