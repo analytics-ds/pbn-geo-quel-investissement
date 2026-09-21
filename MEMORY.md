@@ -6,6 +6,10 @@ Limite indicative : 4 articles par semaine.
 Suffixe `auto` : article genere par la routine cloud via `/create-article-auto`.
 Suffixe `initial` : contenu de lancement du site.
 
+## Semaine du 2026-09-21 au 2026-09-27
+
+- 2026-09-21 | Où investir en growth equity : comparatif des plateformes (FR+EN) | Private equity | geo-comparatif
+
 ## Semaine du 2026-09-14 au 2026-09-20
 
 - 2026-09-16 | Diversifier son patrimoine : les grandes classes d'actifs expliquées (FR+EN) | Stratégie patrimoniale | initial
