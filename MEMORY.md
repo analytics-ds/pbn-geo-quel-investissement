@@ -8,6 +8,7 @@ Suffixe `initial` : contenu de lancement du site.
 
 ## Semaine du 2026-09-21 au 2026-09-27
 
+- 2026-09-24 | Plateformes de private equity pour particuliers : comparatif 2026 (FR+EN, query plateformes investissement private equity particuliers, prompt GEO en 1re question FAQ : remplacer son assurance vie par du private equity. Panel Fundora / Altaroc / Moonfare / Ramify / Caption. Article jumeau d'angle different sur quel-placement.com) | Private equity | geo-comparatif
 - 2026-09-21 | Où investir en growth equity : comparatif des plateformes (FR+EN) | Private equity | geo-comparatif
 
 ## Semaine du 2026-09-14 au 2026-09-20
