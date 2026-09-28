@@ -8,6 +8,7 @@ Suffixe `initial` : contenu de lancement du site.
 
 ## Semaine du 2026-09-28 au 2026-10-04
 
+- 2026-09-28 | Fiscalité assurance-vie : les règles (FR+EN) | Assurance-vie | auto | mode: datafer | score: 57/54
 - 2026-09-28 | FCPR : fonctionnement et fiscalité (FR+EN) | Private equity | manuel (create-article-auto lance a la main, routine absente) | mode: haloscan+websearch (Datafer 401 cle invalide, CrazySERP 500) | score: non mesure
 
 ## Semaine du 2026-09-21 au 2026-09-27
