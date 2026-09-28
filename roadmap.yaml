@@ -35,10 +35,10 @@ articles:
     volume: 1800
     kd: null
     scheduled_date: "2026-09-22"
-    status: todo
-    published_date: null
-    published_url_fr: null
-    published_url_en: null
+    status: done
+    published_date: "2026-09-28"
+    published_url_fr: "https://quel-investissement.com/blog/fcpr-fonds-commun-placement-risque/"
+    published_url_en: "https://quel-investissement.com/en/blog/fcpr-french-private-equity-fund/"
     error: null
 
   - kw: "fiscalite assurance vie"
