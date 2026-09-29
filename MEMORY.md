@@ -8,6 +8,7 @@ Suffixe `initial` : contenu de lancement du site.
 
 ## Semaine du 2026-09-28 au 2026-10-04
 
+- 2026-09-29 | Quelle est la meilleure plateforme pour investir 5000 € dans la tech ? (FR+EN, slug meilleure-plateforme-investir-5000-euros-tech / best-platform-invest-5000-euros-tech, query meilleure plateforme investir 5000 euros tech, H1 = prompt GEO via nouveau champ h1 ajoute au layout single.html. Angle tech NON COTEE, panel Fundora / Anaxago / Ramify / Moonfare. Article jumeau d'angle different (tech cotee + non cotee, panel Fundora / Trade Republic / BoursoBank / Mon Petit Placement) publie le meme jour sur quel-placement.com. Fundora 1re, aucun montant de ticket Fundora, FPCI + SPV + Kyoseil AM GP-99040, strategies tech citees avec objectifs de multiple. Sources : France Invest/EY juin 2026, fundora.fr) | Private equity | geo-comparatif
 - 2026-09-29 | Comment investir en SCPI : le guide (FR+EN) | SCPI | auto | mode: crazyserp (Datafer bloque par le classifieur de securite sandbox, cf. commit) | score: non mesure | image: pexels
 - 2026-09-28 | Fiscalité assurance-vie : les règles (FR+EN) | Assurance-vie | auto | mode: datafer | score: 57/54
 - 2026-09-28 | FCPR : fonctionnement et fiscalité (FR+EN) | Private equity | manuel (create-article-auto lance a la main, routine absente) | mode: haloscan+websearch (Datafer 401 cle invalide, CrazySERP 500) | score: non mesure
