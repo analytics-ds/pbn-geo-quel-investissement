@@ -68,10 +68,10 @@ articles:
     volume: 10100
     kd: null
     scheduled_date: "2026-10-02"
-    status: todo
-    published_date: null
-    published_url_fr: null
-    published_url_en: null
+    status: done
+    published_date: "2026-10-02"
+    published_url_fr: "https://quel-investissement.com/blog/etf-msci-world/"
+    published_url_en: "https://quel-investissement.com/en/blog/msci-world-etf-how-to-choose/"
     error: null
 
   - kw: "plafond epargne retraite"
